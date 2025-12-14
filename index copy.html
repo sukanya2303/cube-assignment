@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GTG</title>
+    <link rel="stylesheet" href="css/styles1.css" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo">GTG</div>
+
+        <nav class="nav d-none d-md-flex gap-4">
+          <a href="#">Home</a>
+          <div class="nav-item dropdown-hover">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Shop</a
+            >
+            <ul class="sub-menu" aria-label="Shop submenu">
+              <li><a href="#">Shop 1</a></li>
+              <li><a href="#">Shop 2</a></li>
+              <li><a href="#">Shop 3</a></li>
+              <li><a href="#">Shop 4</a></li>
+            </ul>
+          </div>
+          <a href="#">Fragrances</a>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </nav>
+
+        <button
+          id="mobileMenuBtn"
+          class="btn-mobile d-md-none"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open menu"
+        >
+          <!-- simple hamburger -->
+          <span class="hamburger">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <!-- SEARCH BUTTON -->
+        <div style="display: flex; align-items: center; gap: 12px">
+          <button
+            class="btn-search"
+            id="searchBtn"
+            aria-expanded="false"
+            aria-controls="searchBox"
+            aria-label="Open search"
+          >
+            <svg
+              stroke="#053a25"
+              fill="none"
+              stroke-width="1.6"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="6"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- search box -->
+          <div
+            class="search-box"
+            id="searchBox"
+            role="search"
+            aria-hidden="true"
+          >
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <button
+              class="search-clear"
+              id="searchClear"
+              aria-label="Clear search"
+              title="Clear"
+            ></button>
+          </div>
+
+          <button class="btn-shop">Shop Now</button>
+        </div>
+      </div>
+    </header>
+    <!-- add this immediately after </header> -->
+    <nav id="mobileMenu" class="mobile-menu d-md-none" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button
+          id="mobileMenuClose"
+          class="mobile-close"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+
+        <ul class="mobile-nav">
+          <li><a href="#">Home</a></li>
+          <li class="mobile-has-submenu">
+            <button
+              class="mobile-sub-toggle"
+              aria-expanded="false"
+              aria-controls="mobile-sub-1"
+            >
+              Shop
+            </button>
+            <ul id="mobile-sub-1" class="mobile-submenu" hidden>
+              <li><a href="#">Shop 1</a></li>
+              <li><a href="#">Shop 2</a></li>
+              <li><a href="#">Shop 3</a></li>
+              <li><a href="#">Shop 4</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Fragrances</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="mobile-actions">
+          <button class="btn-search">Search</button>
+          <button class="btn-shop">Shop Now</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-left">
+          <div class="badge rounded-pill">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="22"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="8" cy="8" r="3"></circle>
+              <path d="M5 15l1-4"></path>
+              <path d="M11 15l-1-4"></path>
+              <path d="M8 11v4"></path>
+            </svg>
+            Awarded the best perfume in the world
+          </div>
+
+          <h1 class="title">Live your best life.</h1>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="num">10x</div>
+              <div class="label">power</div>
+            </div>
+            <div class="stat">
+              <div class="num">9</div>
+              <div class="label">ingredients</div>
+            </div>
+            <div class="stat">
+              <div class="num">20K+</div>
+              <div class="label">happy customers</div>
+            </div>
+          </div>
+
+          <button class="btn-shop large">Shop Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- End main -->
+
+    <section class="product-view">
+      <div class="container py-4">
+        <div class="row g-4 align-items-start">
+          <!-- LEFT: Gallery -->
+          <div class="col-12 col-md-6">
+            <div class="product-gallery">
+              <div class="gallery-stage">
+                <button class="g-nav g-prev" aria-label="previous image">
+                  ‹
+                </button>
+
+                <img id="pvMain" src="images/product1.png" alt="Perfume" />
+
+                <button class="g-nav g-next" aria-label="next image">›</button>
+
+                <div class="g-dots" id="pvDots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              </div>
+
+              <div class="thumbs-row">
+                <button
+                  class="thumb active"
+                  data-src="images/products/p1.jpg"
+                  aria-label="thumb 1"
+                >
+                  <img src="images/products/p1.jpg" alt="thumb 1" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p2.jpg"
+                  aria-label="thumb 2"
+                >
+                  <img src="images/products/p2.jpg" alt="thumb 2" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p3.jpg"
+                  aria-label="thumb 3"
+                >
+                  <img src="images/products/p3.jpg" alt="thumb 3" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p4.jpg"
+                  aria-label="thumb 4"
+                >
+                  <img src="images/products/p4.jpg" alt="thumb 4" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p5.jpg"
+                  aria-label="thumb 5"
+                >
+                  <img src="images/products/p5.jpg" alt="thumb 5" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p1.jpg"
+                  aria-label="thumb 6"
+                >
+                  <img src="images/products/p1.jpg" alt="thumb 6" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p2.jpg"
+                  aria-label="thumb 2"
+                >
+                  <img src="images/products/p2.jpg" alt="thumb 2" />
+                </button>
+                <button
+                  class="thumb"
+                  data-src="images/products/p3.jpg"
+                  aria-label="thumb 3"
+                >
+                  <img src="images/products/p3.jpg" alt="thumb 3" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Product details -->
+          <div class="col-12 col-md-6">
+            <div class="product-details">
+              <h2 class="pv-title">GTG Perfumes</h2>
+
+              <div class="price-card active" id="singleCard">
+                <div class="price-card-head">Most Popular</div>
+
+                <div class="price-card-body">
+                  <!-- subscription line (radio controls) -->
+                  <div class="subscription-line">
+                    <label class="radio">
+                      <input
+                        id="singleRadio"
+                        type="radio"
+                        name="subscription"
+                        value="single"
+                        checked
+                      />
+                      <span class="radio-label">Single Subscription</span>
+                    </label>
+
+                    <div class="price" id="priceSingleBlock">
+                      <div class="price-current" id="priceCurrent">$99.99</div>
+                      <div class="price-old" id="priceOld">$146</div>
+                    </div>
+                  </div>
+
+                  <!-- single subscription details (fragrance selector + includes + features) -->
+                  <div id="singleDetails" class="price-ss">
+                    <hr />
+
+                    <!-- Choose a Fragrance (single) -->
+                    <div class="pv-fragrances" id="fragSingle">
+                      <div class="pv-frag-label">Choose a Fragrance</div>
+                      <div class="pv-frag-list">
+                        <label class="frag-item active">
+                          <input type="radio" name="frag1" checked />
+                          <img src="images/p1.png" alt="Original" />
+                          <div class="frag-title">Original</div>
+                          <div class="frag-badge">BEST SELLER</div>
+                        </label>
+
+                        <label class="frag-item">
+                          <input type="radio" name="frag1" />
+                          <img src="images/p1.png" alt="Lily" />
+                          <div class="frag-title">Lily</div>
+                        </label>
+
+                        <label class="frag-item">
+                          <input type="radio" name="frag1" />
+                          <img src="images/p1.png" alt="Rose" />
+                          <div class="frag-title">Rose</div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <!-- What's Included -->
+                    <div class="pv-includes">
+                      <div class="pv-include-title">What's Included:</div>
+                      <div class="pv-includes-grid">
+                        <div class="include-box">
+                          <div class="include-title">Every 30 Days</div>
+                          <div class="include-inner">
+                            <img
+                              class="product-large"
+                              src="images/p1.png"
+                              alt="large product"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="include-box">
+                          <div class="include-title">
+                            One Time <span class="muted">(Free)</span>
+                          </div>
+                          <div class="include-inner">
+                            <div class="small-images">
+                              <img src="images/p1.png" alt="small 1" />
+                              <img src="images/p1.png" alt="small 2" />
+                              <img src="images/p1.png" alt="small 3" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- features -->
+                    <ul class="pv-features">
+                      <li>1 Bottle Shipped Monthly</li>
+                      <li>
+                        <strong>Free</strong> Sampler For Original, Lily And
+                        Rose
+                      </li>
+                      <li><strong>50% OFF</strong> Shipping</li>
+                      <li>Pause Or Cancel Anytime After 3 Months Minimum</li>
+                      <li>28 Day Money Back Guarantee*</li>
+                    </ul>
+                  </div>
+
+                  <!-- double subscription area (hidden by default) -->
+                  <div id="doubleDetails" class="ds-panel visually-hidden">
+                    
+                    <div class="pv-fragrances">
+                      <div class="pv-frag-label">Choose Fragrance 1</div>
+                      <div class="pv-frag-list" id="frag1List">
+                        <label class="frag-item active">
+                          <input type="radio" name="frag1_ds" checked />
+                          <img src="images/p1.png" alt="Original" />
+                          <div class="frag-title">Original</div>
+                        </label>
+                        <label class="frag-item"
+                          ><input type="radio" name="frag1_ds" /><img
+                            src="images/p1.png"
+                            alt="Lily"
+                          />
+                          <div class="frag-title">Lily</div></label
+                        >
+                        <label class="frag-item"
+                          ><input type="radio" name="frag1_ds" /><img
+                            src="images/p1.png"
+                            alt="Rose"
+                          />
+                          <div class="frag-title">Rose</div></label
+                        >
+                      </div>
+                    </div>
+
+                    <div class="pv-fragrances" style="margin-top: 14px">
+                      <div class="pv-frag-label">Choose Fragrance 2</div>
+                      <div class="pv-frag-list" id="frag2List">
+                        <label class="frag-item active">
+                          <input type="radio" name="frag2_ds" checked />
+                          <img src="images/p1.png" alt="Original" />
+                          <div class="frag-title">Original</div>
+                        </label>
+                        <label class="frag-item"
+                          ><input type="radio" name="frag2_ds" /><img
+                            src="images/p1.png"
+                            alt="Lily"
+                          />
+                          <div class="frag-title">Lily</div></label
+                        >
+                        <label class="frag-item"
+                          ><input type="radio" name="frag2_ds" /><img
+                            src="images/p1.png"
+                            alt="Rose"
+                          />
+                          <div class="frag-title">Rose</div></label
+                        >
+                      </div>
+                    </div>
+
+                    <!-- include/feature area for double — reuse the same markup or show a modified list -->
+                    <div class="pv-includes" style="margin-top: 12px">
+                      <div class="pv-include-title">What's Included:</div>
+                      <div class="pv-includes-grid">
+                        <div class="include-box">
+                          <div class="include-title">Every 30 Days</div>
+                          <div class="include-inner">
+                            <!-- For double show two bottles side-by-side to indicate 2x -->
+                            <div
+                              style="
+                                display: flex;
+                                gap: 12px;
+                                align-items: center;
+                              "
+                            >
+                              <img
+                                class="product-large"
+                                src="images/p1.png"
+                                style="width: 110px"
+                                alt="p1"
+                              />
+                              <img
+                                class="product-large"
+                                src="images/p1.png"
+                                style="width: 110px"
+                                alt="p2"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="include-box">
+                          <div class="include-title">
+                            One Time <span class="muted">(Free)</span>
+                          </div>
+                          <div class="include-inner">
+                            <div class="small-images">
+                              <img src="images/p1.png" alt="small 1" />
+                              <img src="images/p1.png" alt="small 2" />
+                              <img src="images/p1.png" alt="small 3" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <ul class="pv-features" style="margin-top: 10px">
+                      <li>2 Bottles Shipped Monthly</li>
+                      <li>
+                        <strong>Free</strong> Sampler For Original, Lily And
+                        Rose
+                      </li>
+                      <li><strong>50% OFF</strong> Shipping</li>
+                      <li>Pause Or Cancel Anytime After 3 Months Minimum</li>
+                      <li>28 Day Money Back Guarantee*</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- compact control row for Double (mirrors the screenshot layout) -->
+              <div class="price-card-ds" id="doubleCard" style="margin-top: 8px">
+                <div class="price-card-body-ds">
+                  <div
+                    class="pv-actions"
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                    "
+                  >
+                    <label class="radio secondary">
+                      <input
+                        id="doubleRadio"
+                        type="radio"
+                        name="subscription"
+                        value="double"
+                      />
+                      <span class="radio-label">Double Subscription</span>
+                    </label>
+
+                    <div
+                      class="price"
+                      id="priceDoubleBlock"
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        gap: 4px;
+                      "
+                    >
+                      <div
+                        class="price-current"
+                        id="priceDouble"
+                        style="display: none"
+                      >
+                        $169.99
+                      </div>
+                      <div
+                        class="price-old"
+                        id="priceDoubleOld"
+                        style="display: none"
+                      >
+                        $146
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+
+              <button class="btn-add" id="addToCartBtn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-collection py-5">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-6">
+        <h2 class="section-title mb-4">Our Collection</h2>
+
+        <div class="collection-accordion">
+
+          <!-- Item 1 (open by default) -->
+          <div class="collection-item active">
+            <button class="collection-header">
+              <span>Signature Scents</span>
+              <span class="icon">−</span>
+            </button>
+            <div class="collection-body">
+              <p>
+                Discover our curated line of signature perfumes, designed to become your daily companion.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="collection-item">
+            <button class="collection-header">
+              <span>Signature Scents</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="collection-body">
+              <p>
+                A refined range crafted for timeless elegance and everyday luxury.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="collection-item">
+            <button class="collection-header">
+              <span>Signature Scents</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="collection-body">
+              <p>
+                Premium blends inspired by nature, mood, and personality.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="collection-item">
+            <button class="collection-header">
+              <span>Signature Scents</span>
+              <span class="icon">+</span>
+            </button>
+            <div class="collection-body">
+              <p>
+                Carefully composed notes for long-lasting impressions.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="col-lg-6 text-center">
+        <div class="collection-image">
+          <img src="images/perfume.jpg" alt="Perfume Collection" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    
+    
+    <!-- JavaScript -->
+    <script>
+      // small accessibility enhancement: keyboard focus for CTA
+      document.querySelectorAll(".btn").forEach((b) => {
+        b.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") b.click();
+        });
+      });
+    </script>
+
+    <script>
+      (function () {
+        const btn = document.getElementById("mobileMenuBtn");
+        const mobile = document.getElementById("mobileMenu");
+        const closeBtn = document.getElementById("mobileMenuClose");
+
+        function openMenu() {
+          mobile.classList.add("open");
+          btn.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+          mobile.setAttribute("aria-hidden", "false");
+          // prevent background scroll
+          document.documentElement.style.overflow = "hidden";
+        }
+
+        function closeMenu() {
+          mobile.classList.remove("open");
+          btn.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+          mobile.setAttribute("aria-hidden", "true");
+          document.documentElement.style.overflow = "";
+        }
+
+        btn &&
+          btn.addEventListener("click", function () {
+            if (mobile.classList.contains("open")) closeMenu();
+            else openMenu();
+          });
+
+        closeBtn && closeBtn.addEventListener("click", closeMenu);
+
+        // close when clicking outside inner content (on overlay)
+        mobile &&
+          mobile.addEventListener("click", function (e) {
+            if (e.target === mobile) closeMenu();
+          });
+
+        // close on ESC
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && mobile.classList.contains("open"))
+            closeMenu();
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        // Mobile submenu toggles
+        document.querySelectorAll(".mobile-sub-toggle").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            const expanded = btn.getAttribute("aria-expanded") === "true";
+            const targetId = btn.getAttribute("aria-controls");
+            const target = document.getElementById(targetId);
+
+            if (!target) return;
+
+            if (expanded) {
+              target.hidden = true;
+              btn.setAttribute("aria-expanded", "false");
+            } else {
+              target.hidden = false;
+              btn.setAttribute("aria-expanded", "true");
+            }
+          });
+        });
+
+        // Optional: close mobile submenu(s) when mobile menu closes
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+        function closeAllMobileSubmenus() {
+          document.querySelectorAll(".mobile-sub-toggle").forEach((b) => {
+            const id = b.getAttribute("aria-controls");
+            const t = document.getElementById(id);
+            if (t) {
+              t.hidden = true;
+              b.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener("click", function () {
+            // if opening, ensure submenus are closed initially
+            if (mobileMenu.classList.contains("open")) {
+              // closing
+              closeAllMobileSubmenus();
+            } else {
+              // opening -> keep closed
+              closeAllMobileSubmenus();
+            }
+          });
+        }
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener("click", closeAllMobileSubmenus);
+        }
+
+        // Accessibility: close submenus when switching to desktop (optional)
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 768) {
+            closeAllMobileSubmenus();
+          }
+        });
+      })();
+
+      // <!-- search button -->
+
+      (function () {
+        const searchBtn = document.getElementById("searchBtn");
+        const searchBox = document.getElementById("searchBox");
+        const searchInput = document.getElementById("searchInput");
+        const searchClear = document.getElementById("searchClear");
+
+        function openSearch() {
+          searchBox.classList.add("active");
+          searchBtn.setAttribute("aria-expanded", "true");
+          searchBox.setAttribute("aria-hidden", "false");
+          setTimeout(() => searchInput.focus(), 160);
+        }
+        function closeSearch() {
+          searchBox.classList.remove("active");
+          searchBtn.setAttribute("aria-expanded", "false");
+          searchBox.setAttribute("aria-hidden", "true");
+        }
+
+        // toggle
+        searchBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (searchBox.classList.contains("active")) closeSearch();
+          else openSearch();
+        });
+
+        // clear icon behavior
+        searchClear.addEventListener("click", function (e) {
+          e.stopPropagation();
+          searchInput.value = "";
+          searchInput.focus();
+        });
+
+        // click outside -> close
+        document.addEventListener("click", function (e) {
+          if (!searchBox.contains(e.target) && !searchBtn.contains(e.target)) {
+            closeSearch();
+          }
+        });
+
+        // Esc closes
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeSearch();
+          if (e.key === "Enter" && document.activeElement === searchInput) {
+            // implement search submit logic here
+            console.log("Search submitted:", searchInput.value);
+            // optionally closeSearch();
+          }
+        });
+
+        // Prevent clicks inside search box from bubbling up and closing
+        searchBox.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      })();
+
+      //   Product section
+      (function () {
+        const main = document.getElementById("pvMain");
+        const thumbs = document.querySelectorAll(".thumb");
+        const dots = document.querySelectorAll("#pvDots .dot");
+        const prev = document.querySelector(".g-prev");
+        const next = document.querySelector(".g-next");
+        let idx = 0;
+        const imgs = Array.from(thumbs).map((t) => t.dataset.src);
+
+        function setActive(i) {
+          idx = (i + imgs.length) % imgs.length;
+          main.src = imgs[idx];
+          thumbs.forEach((t) => t.classList.remove("active"));
+          dots.forEach((d) => d.classList.remove("active"));
+          if (thumbs[idx]) thumbs[idx].classList.add("active");
+          if (dots[idx]) dots[idx].classList.add("active");
+        }
+
+        thumbs.forEach((t, i) => {
+          t.addEventListener("click", () => setActive(i));
+        });
+
+        prev.addEventListener("click", () => setActive(idx - 1));
+        next.addEventListener("click", () => setActive(idx + 1));
+
+        // dots click
+        dots.forEach((d, i) => d.addEventListener("click", () => setActive(i)));
+
+        // initial
+        setActive(0);
+      })();
+
+    </script>
+    <script>
+  const singleRadio = document.getElementById("singleRadio");
+  const doubleRadio = document.getElementById("doubleRadio");
+
+  const singleDetails = document.getElementById("singleDetails");
+  const doubleDetails = document.getElementById("doubleDetails");
+
+  const singleCard = document.getElementById("singleCard");
+  const doubleCard = document.getElementById("doubleCard");
+
+  const priceCurrent = document.getElementById("priceCurrent");
+  const priceOld = document.getElementById("priceOld");
+
+  const priceDouble = document.getElementById("priceDouble");
+  const priceDoubleOld = document.getElementById("priceDoubleOld");
+
+  // INITIAL STATE
+  singleCard.classList.add("active");
+  doubleCard.classList.remove("active");
+  singleDetails.style.display = "block";
+  doubleDetails.classList.add("visually-hidden");
+
+  priceCurrent.textContent = "$99.99";
+  priceOld.textContent = "$146";
+  priceDouble.style.display = "none";
+  priceDoubleOld.style.display = "none";
+
+  // SINGLE SUBSCRIPTION
+  singleRadio.addEventListener("change", () => {
+    if (!singleRadio.checked) return;
+
+    singleCard.classList.add("active");
+    doubleCard.classList.remove("active");
+
+    singleDetails.style.display = "block";
+    doubleDetails.classList.add("visually-hidden");
+
+    priceCurrent.textContent = "$99.99";
+    priceOld.textContent = "$146";
+
+    priceDouble.style.display = "none";
+    priceDoubleOld.style.display = "none";
+  });
+
+  // DOUBLE SUBSCRIPTION
+  doubleRadio.addEventListener("change", () => {
+    if (!doubleRadio.checked) return;
+
+    singleCard.classList.remove("active");
+    doubleCard.classList.add("active");
+
+    singleDetails.style.display = "none";
+    doubleDetails.classList.remove("visually-hidden");
+
+    // IMPORTANT: do NOT touch single price block
+    priceCurrent.textContent = "$169.99";
+    priceOld.textContent = "$146";
+
+    priceDouble.style.display = "block";
+    priceDoubleOld.style.display = "block";
+  });
+</script>
+
+
+  </body>
+</html>
