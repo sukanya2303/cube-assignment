@@ -15,7 +15,6 @@ body {
   margin: 0;
 }
 
-/* FULL-WIDTH BACKGROUND AREA */
 .hero {
   position: relative;
   width: 100%;
@@ -29,7 +28,6 @@ body {
   align-items: center;
 }
 
-/* HEADER is inside the background image */
 .site-header {
   padding: 18px 0;
   position: absolute;
@@ -40,7 +38,7 @@ body {
   display: block;
 }
 .site-header .container {
-  position: relative; /* for absolutely-positioning nav */
+  position: relative;
   align-items: center;
 }
 .btn-search {
@@ -48,8 +46,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  width: 48px; /* clickable area width — adjust as needed */
-  height: 48px; /* clickable area height — adjust as needed */
+  width: 48px; 
+  height: 48px;
   padding: 0;
   margin: 0;
   background: transparent;
@@ -58,22 +56,20 @@ body {
   box-sizing: border-box;
 }
 
-/* Make the search icon color darker like expected image */
 .btn-search svg {
-  width: 34px; /* desired icon size */
+  width: 34px; 
   height: 34px;
-  display: block; /* remove baseline alignment issues */
+  display: block;
   vertical-align: middle;
   stroke: #000000;
 }
 .btn-search:hover svg {
-  stroke: #171717; /* slightly darker on hover */
+  stroke: #171717;
 }
-/* Hidden search box */
 .search-box {
   position: absolute;
-  right: 150px; /* adjust horizontal position relative to header container */
-  top: 40px; /* vertically align with header */
+  right: 150px; 
+  top: 40px; 
   display: flex;
   align-items: center;
   gap: 8px;
@@ -88,14 +84,12 @@ body {
   z-index: 120;
 }
 
-/* visible state */
 .search-box.active {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
-/* input styling */
 .search-box input {
   border: none;
   outline: none;
@@ -106,7 +100,6 @@ body {
   padding: 6px 4px;
 }
 
-/* clear button */
 .search-clear {
   background: transparent;
   border: none;
@@ -121,7 +114,6 @@ body {
   color: #222;
 }
 
-/* small screens: move search box to full width under header */
 @media (max-width: 576px) {
   .search-box {
     position: fixed;
@@ -159,7 +151,6 @@ body {
 .nav a:hover {
   opacity: 0.7;
 }
-/* ---------- Desktop dropdown ---------- */
 .nav-item {
   position: relative;
 }
@@ -190,7 +181,6 @@ body {
   z-index: 60;
 }
 
-/* submenu items */
 .nav-item .sub-menu li a {
   display: block;
   padding: 10px 16px;
@@ -204,7 +194,6 @@ body {
   color: #016630;
 }
 
-/* show on hover/focus */
 .nav-item:hover .sub-menu,
 .nav-item:focus-within .sub-menu {
   opacity: 1;
@@ -212,12 +201,10 @@ body {
   transform: translateY(0);
 }
 
-/* small caret rotation when focused (optional) */
 .nav-item .dropdown-toggle[aria-expanded="true"]::after {
   transform: rotate(180deg);
 }
 
-/* ---------- Mobile submenu (accordion) ---------- */
 .mobile-has-submenu {
   list-style: none;
   padding: 0;
@@ -246,7 +233,6 @@ body {
   transform: rotate(-180deg);
 }
 
-/* hidden by default - we use [hidden] for accessibility */
 .mobile-submenu {
   padding-left: 10px;
   margin: 6px 0 12px;
@@ -266,7 +252,6 @@ body {
   background: rgba(1, 102, 51, 0.04);
 }
 
-/* keep mobile submenu hidden on desktop (mobile menu already d-md-none) */
 @media (min-width: 768px) {
   .mobile-submenu,
   .mobile-has-submenu,
@@ -334,7 +319,7 @@ body {
   margin-top: -30px;
 }
 
-/* Hero content layout */
+/* Hero content */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -348,10 +333,7 @@ body {
   max-width: 100%;
 }
 
-/* Responsive */
-/* ---------- Responsive tweaks (append to end of styles.css) ---------- */
 
-/* Slight adjustments for large desktops / smaller widescreens */
 @media (max-width: 1200px) {
   .perfume-img {
     width: 420px;
@@ -364,16 +346,13 @@ body {
   }
 }
 
-/* Tablet / small laptop */
 @media (max-width: 992px) {
-  /* Stack the hero content vertically so text sits above the image */
   .hero-content {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.75rem;
   }
 
-  /* Make the image responsive and move it under the content */
   .perfume-img {
     order: 2;
     width: 100%;
@@ -382,7 +361,6 @@ body {
     align-self: center;
   }
 
-  /* Reduce spacing and scale text for tablet */
   .stats {
     gap: 2rem;
   }
@@ -391,16 +369,15 @@ body {
   }
   .label {
     font-size: 1.25rem;
-    margin-top: 0; /* label placed normally under number on smaller screens */
+    margin-top: 0;
   }
 
-  /* Reduce large button padding on tablets */
+
   .btn-shop.large {
     padding: 10px 28px;
     font-size: 16px;
   }
 
-  /* Make header slightly smaller on tablets */
   .site-header {
     padding: 18px 0;
   }
@@ -408,7 +385,6 @@ body {
     font-size: 24px;
   }
 }
-/* Mobile menu toggle (visible only on small devices) */
 .btn-mobile {
   display: inline-flex;
   align-items: center;
@@ -423,7 +399,6 @@ body {
   margin-right: 6px;
 }
 
-/* Hamburger lines */
 .btn-mobile .hamburger {
   display: inline-block;
   width: 18px;
@@ -450,10 +425,9 @@ body {
   top: 12px;
 }
 
-/* Mobile menu panel (full-screen slide-down) */
 .mobile-menu {
   position: fixed;
-  inset: 0 0 auto 0; /* start at top */
+  inset: 0 0 auto 0;
   top: 0;
   left: 0;
   right: 0;
@@ -470,21 +444,18 @@ body {
   display: block;
 }
 
-/* when open we set height to full */
 .mobile-menu.open {
   height: 100vh;
   overflow: auto;
 }
 
-/* inner content */
 .mobile-menu-inner {
   max-width: 1000px;
   margin: 0 auto;
   padding: 1.25rem;
-  padding-top: 86px; /* leave space for header area */
+  padding-top: 86px; 
 }
 
-/* close button top-right */
 .mobile-close {
   position: absolute;
   top: 18px;
@@ -497,7 +468,6 @@ body {
   cursor: pointer;
 }
 
-/* mobile nav list */
 .mobile-nav {
   list-style: none;
   padding: 0;
@@ -514,7 +484,6 @@ body {
   font-size: 1.05rem;
 }
 
-/* mobile actions (search / shop) */
 .mobile-actions {
   margin-top: 1rem;
   display: flex;
@@ -525,7 +494,6 @@ body {
   padding: 10px 20px;
 }
 
-/* transform hamburger to X when open */
 .btn-mobile.open .hamburger span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -536,7 +504,6 @@ body {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* accessibility: hide mobile menu on >= md (Bootstrap) */
 @media (min-width: 768px) {
   .btn-mobile,
   .mobile-menu {
@@ -546,34 +513,29 @@ body {
 
 /* Mobile phones */
 @media (max-width: 576px) {
-  /* Reduce hero height so first fold fits well on phones */
   .hero {
     background: url(../images/home-mobile.png);
     padding-top: 90px;
     background-position: center 20%;
   }
 
-  /* Center and narrow hero content for small screens */
   .hero-content .hero-left {
     align-items: flex-start;
     margin-top: -190px;
   }
 
-  /* Badge smaller */
   .badge {
     padding: 8px 18px !important;
     font-size: 15px !important;
     gap: 8px;
   }
 
-  /* Title smaller and readable */
   .title {
     font-size: clamp(1.8rem, 6.8vw, 2.6rem);
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
 
-  /* Stack stats vertically if needed and reduce sizes */
   .stats {
     gap: 1.2rem;
     flex-wrap: wrap;
@@ -592,25 +554,21 @@ body {
     margin-top: 0.15rem;
   }
 
-  /* CTA smaller & full-width friendly */
   .btn-shop.large {
     padding: 10px 20px;
     font-size: 15px;
   }
 
-  /* Header behavior on small screens: keep logo left, actions right (nav is hidden via your bootstrap classes) */
   .site-header {
     padding: 12px 0;
   }
 
-  /* Make perfume image smaller on tiny phones */
   .perfume-img {
     max-width: 420px;
     width: 100%;
   }
 }
 
-/* Misc small polish for all sizes */
 @media (hover: hover) {
   .btn-shop:hover {
     transform: translateY(-2px);
@@ -622,41 +580,35 @@ body {
     position: static;
     transform: none;
     translate: none;
-    display: none; /* d-none d-md-flex already hides nav; keep it safe */
+    display: none; 
   }
 
-  /* Keep search and shop spaced nicely when nav hidden */
   .site-header .actions {
     gap: 10px;
   }
 }
 
-/* Fine-tune vertical alignment for header children */
 .site-header .container > * {
   display: inline-flex;
   align-items: center;
 }
 
 @media (max-width: 767.98px) {
-  /* Hide search button */
   .btn-search {
     display: none !important;
     visibility: hidden !important;
   }
 
-  /* Hide search dropdown box */
   #searchBox {
     display: none !important;
     visibility: hidden !important;
   }
 
-  /* Hide Shop Now button */
   .btn-shop {
     display: none !important;
     visibility: hidden !important;
   }
 
-  /* Move mobile toggle button to right */
   .btn-mobile {
     display: inline-flex !important;
     position: absolute !important;
@@ -667,7 +619,6 @@ body {
   }
 }
 
-/* Reset a few defaults inside product-view to avoid global collisions */
 .product-view {
   margin-top: 100px;
 }
@@ -693,7 +644,6 @@ body {
   object-fit: contain;
 }
 
-/* nav arrows */
 .g-nav {
   position: absolute;
   top: 97%;
@@ -764,10 +714,56 @@ body {
   border-color: rgba(6, 64, 34, 0.08);
 }
 
-.product-details {
-  padding-left: 8px;
-  padding-right: 8px;
-}
+.product-details { max-width: 740px; margin:0 auto; }
+
+    .price-card{ border-radius:8px; border:1px solid #e6ece6; overflow:hidden; margin-bottom:12px;}
+    .price-card-head{ background:#f5f9f5; padding:10px 16px; font-weight:700; color:var(--accent-green);}
+    .price-card-body{ padding:14px 16px; }
+
+    .subscription-line{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .radio{ display:flex; align-items:center; gap:8px; }
+    .radio input[type="radio"]{ accent-color: var(--accent-green); }
+    .radio .radio-label{ font-weight:600; color:#214033; }
+
+    .price{ text-align:right; }
+    .price .price-current{ font-weight:800; color:#0a6b3a; font-size:18px; }
+    .price .price-old{ text-decoration:line-through; color:#97a39a; font-size:13px; }
+
+    .pv-fragrances{ margin-top:12px; }
+    .pv-frag-label{ font-weight:600; color:#2e3b34; margin-bottom:8px; }
+    .pv-frag-list{ display:flex; gap:12px; flex-wrap:wrap; }
+    .frag-item{ display:flex; flex-direction:column; align-items:center; gap:8px; padding:10px; border-radius:8px; border:1px solid #f0f0f0; cursor:pointer; min-width:82px; }
+    .frag-item input{ display:none; }
+    .frag-item.active{ border-color: rgba(31,91,58,0.12); background:#fff; box-shadow:0 2px 6px rgba(14,22,18,0.03);}
+    .frag-item img{ width:70px; height:auto; display:block; }
+
+    .pv-includes{ margin-top:14px; }
+    .pv-include-title{ color:var(--accent-green); font-weight:700; margin-bottom:8px;}
+    .pv-includes-grid{ display:flex; gap:16px; align-items:flex-start; flex-wrap:wrap; }
+    .include-box{ border:2px solid var(--card-border); border-radius:10px; padding:14px 18px; position:relative; background:#fff; min-width:160px; }
+    .include-title{ position:absolute; top:12px; left:16px; font-weight:700; font-size:16px;color:#2f3430; }
+    .include-inner{ padding-top:48px; display:flex; align-items:center; justify-content:center; }
+    .product-large{ width:140px; }
+    .small-images{ display:flex; gap:28px; align-items:flex-end; }
+    .small-images img{ width:58px; }
+
+    .pv-features{ list-style:none; padding-left:0; margin:12px 0 0; color:#032E15; }
+    .pv-features li{ position:relative; padding:8px 0 8px 36px; border-bottom:1px dashed rgba(0,0,0,0.04); font-size:14px; }
+    .pv-features li::before{ content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:20px; height:20px; background-image:url('images/check-badge.svg'); background-size:contain; background-repeat:no-repeat; }
+
+    .ds-panel{ display:none; margin-top:12px; padding:12px; border-radius:8px; border:1px dashed rgba(0,0,0,0.04); }
+
+    .btn-add{ margin-top:12px; background:var(--accent-green); color:#fff; border:none; padding:10px 16px; border-radius:6px; cursor:pointer; font-weight:700;}
+    .btn-add:active{ transform:translateY(1px); }
+
+    .visually-hidden{ display:none !important; }
+
+    @media (max-width:720px){
+      .pv-frag-list{ gap:8px; }
+      .product-large{ width:110px; }
+      .small-images img{ width:48px; gap:18px; }
+      .include-box{ min-width:140px; }
+    }
 .pv-title {
   color: var(--green-900, #0b3b26);
   font-weight: 800;
@@ -922,16 +918,14 @@ body {
 }
 
 
-/* Use flex so each child can size itself to its content */
 .pv-includes-grid {
   display: flex;
    grid-template-columns: repeat(2, 1fr);
   gap: 18px;
-  align-items: stretch; /* keeps vertical alignment */
-  flex-wrap: wrap; /* wrap on small screens */
+  align-items: stretch; 
+  flex-wrap: wrap; 
 }
 
-/* Cards sized by content: do not grow/shrink */
 .include-box {
   position: relative;
   border: 1px solid #919798;
@@ -939,20 +933,18 @@ body {
   padding: 18px 5px 20px 5px;
   background: #fff;
   box-sizing: content-box;
-  flex: 0 0 auto; /* key: width is determined by content */
+  flex: 0 0 auto; 
   display: flex;
   flex-direction: column;
 }
 
-/* Ensure subtle internal spacing for very small content */
 .include-box .include-inner {
-  padding-top: 52px; /* reserve space for absolutely placed title */
+  padding-top: 52px; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Title placed top-left */
 .include-box .include-title {
   position: absolute;
   top: 14px;
@@ -985,13 +977,12 @@ body {
 }
 
 .include-box.right .small-images img {
-  width: 85px; /* control small bottle size */
+  width: 85px; 
   height: 85px;
   display: block;
   margin-bottom: 6px;
 }
 
-/* Make sure cards have reasonable min/max so they don't become tiny or huge on very small/large screens */
 .include-box {
   min-width: 180px;
   max-width: 52vw;
@@ -1011,7 +1002,20 @@ body {
 .price-card-ds .price-card-body-ds .price {
   text-align: right;
 }
-/* Responsive tweaks: stack cards on small screens */
+
+.price-card,
+.price-card-ds {
+  border: 2px solid #dcdcdc;
+  transition: all 0.2s ease;
+}
+
+.price-card.active,
+.price-card-ds.active {
+  border-color: #1f7a3f;
+  box-shadow: 0 4px 12px rgba(31, 122, 63, 0.12);
+}
+
+
 @media (max-width: 768px) {
   .pv-includes-grid {
     flex-direction: column;
@@ -1064,14 +1068,14 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 22px;       /* adjust icon size */
+  width: 22px;       
   height: 22px;
-  background-image: url("../images/SealCheck.png"); /* your icon path */
+  background-image: url("../images/SealCheck.png"); 
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* actions footer */
+
 .pv-actions {
   display: flex;
   gap: 12px;
@@ -1101,7 +1105,6 @@ body {
   box-shadow: 0 8px 30px rgba(6, 64, 34, 0.12);
 }
 
-/* responsive tweaks */
 @media (max-width: 991.98px) {
   .product-gallery .gallery-stage img {
     max-height: 420px;
@@ -1211,7 +1214,6 @@ body {
   line-height: 1.6;
 }
 
-/* Active State */
 .collection-item.active .collection-body {
   max-height: 200px;
   padding: 0 22px 18px;
@@ -1255,7 +1257,7 @@ body {
   padding: 20px 10px;
 }
 
-/* Mobile */
+ 
 @media (max-width: 767px) {
   .collection-stats {
     padding: 60px 0;
@@ -1271,7 +1273,7 @@ body {
 }
 
 
-/* Mobile */
+ 
 @media (max-width: 767px) {
   .section-title {
     font-size: 28px;
@@ -1412,7 +1414,7 @@ body {
   color: #fff;
 }
 
-/* Mobile */
+ 
 @media (max-width: 767px) {
   .section-title {
     font-size: 24px;
@@ -1534,7 +1536,7 @@ body {
   text-decoration: underline;
 }
 
-/* Mobile */
+
 @media (max-width: 767px) {
   .gtg-footer {
     text-align: left;
